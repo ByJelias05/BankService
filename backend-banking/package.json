@@ -11,6 +11,11 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "mysql2": "^3.22.4"
+    "mysql2": "^3.22.4",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "@sequelize/cli": "^7.0.0-alpha.48",
+    "sequelize-cli": "^6.6.5"
   }
 }
