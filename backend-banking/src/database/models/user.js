@@ -1,9 +1,9 @@
+const {DataTypes} = require('sequelize');
 
-
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize) => {
     const User = sequelize.define('User', {
         id: {
-            id: DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
             
@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         createdAt: {
             allowNull: false,
-            type: Sequelize.DATE
+            type: DataTypes.DATE
         },
         updatedAt: {
             allowNull: false,
-            type: Sequelize.DATE
+            type: DataTypes.DATE
         }
     })
 

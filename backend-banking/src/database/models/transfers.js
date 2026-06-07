@@ -1,7 +1,9 @@
+const {DataTypes} = require('sequelize');
+
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequeliz) => {
     const Transfer = sequelize.define('Transfers', {
         id: {
         type: Sequelize.INTEGER,

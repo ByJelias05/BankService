@@ -1,6 +1,6 @@
+const {DataTypes} = require('sequelize');
 
-
-module.exports = (sequelize, DataTypes) =>{
+module.exports = (sequelize) =>{
     const Account = sequelize.define('Accounts', {
         id: {
             type: DataTypes.INTEGER,
@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) =>{
         },
         userId: {
             field: 'userId',
+            type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'Users',
                 key: 'id'
@@ -26,7 +28,8 @@ module.exports = (sequelize, DataTypes) =>{
             allowNull: false,
             type: DataTypes.DATE
         }
-    })
+    });
+
 
     return Account;
 }
