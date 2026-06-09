@@ -3,15 +3,15 @@ const {DataTypes} = require('sequelize');
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-module.exports = (sequeliz) => {
-    const Transfer = sequelize.define('Transfers', {
+module.exports = (Sequelize) => {
+    const Transfer = Sequelize.define('Transfers', {
         id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
       fromAccountId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
           model: 'Accounts',
@@ -20,7 +20,7 @@ module.exports = (sequeliz) => {
         onDelete: 'CASCADE'
       },
       toAccountId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
           model: 'Accounts',
@@ -29,16 +29,16 @@ module.exports = (sequeliz) => {
         onDelete: 'CASCADE'
       },
       amount: {
-        type: Sequelize.DECIMAL(10, 2),
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       }
     });
 
