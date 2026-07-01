@@ -1,7 +1,19 @@
-const {Pool} = require("pg")
-const db = require("../../../database/models")
+const db = require("../../../database/models/")
 
 class IRepositoryUser{
+
+    static async CreateUser(user){
+
+        const userCreated = db.User.create(user);
+        console.log(userCreated)
+        return userCreated;
+    }
+
+    static async GetAll(){
+        const users = await db.User.findAll();
+        console.log(users)
+        return users;
+    }
     
     static async findById(id){
         
