@@ -15,7 +15,9 @@
     "express": "^5.2.1",
     "mssql": "^12.5.5",
     "mysql2": "^3.22.4",
-    "sequelize": "^6.37.8"
+    "sequelize": "^6.37.8",
+    "yup": "^1.7.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@sequelize/cli": "^7.0.0-alpha.48",
