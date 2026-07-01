@@ -28,6 +28,10 @@ module.exports = (sequelize) => {
         updatedAt: {
             allowNull: false,
             type: DataTypes.DATE
+        },
+        password: {
+            allowNull: true,
+            type: DataTypes.STRING
         }
     })
 
